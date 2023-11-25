@@ -9,3 +9,4 @@ dist/
 *.tgz
 .DS_Store
 cli.js
+core.js
