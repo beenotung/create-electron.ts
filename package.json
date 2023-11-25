@@ -27,6 +27,7 @@
     "create-electron.ts": "./cli.js"
   },
   "files": [
+    "core.js",
     "cli.js"
   ],
   "scripts": {
