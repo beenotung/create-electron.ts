@@ -1,6 +1,6 @@
 {
   "name": "create-electron.ts",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "setup electron project template with typescript",
   "keywords": [
     "npm-init",
