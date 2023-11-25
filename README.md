@@ -2,9 +2,25 @@
 
 setup electron project template with typescript
 
-Unlike create-electron-app, the project setup by this starter does not depends on electron-forge nor yarn, hence it works just fine with pnpm without `shamefully-hoist` flag.
-
 [![npm Package Version](https://img.shields.io/npm/v/create-electron)](https://www.npmjs.com/package/create-electron)
+
+## Usage
+
+You can start an electron project with `npm init`:
+
+```bash
+npm init electron.ts
+```
+
+You can use the latest version with `npx`:
+
+```bash
+npx create-electron.ts@latest
+```
+
+## Why not create-electron-app?
+
+Unlike create-electron-app, the project setup by this starter does not depends on electron-forge nor yarn, hence it works just fine with pnpm without `shamefully-hoist` flag.
 
 ## License
 
