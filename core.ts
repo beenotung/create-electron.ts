@@ -19,7 +19,7 @@ async function main() {
       content = JSON.stringify(content, null, 2)
     }
 
-    writeFileSync(file, content)
+    writeFileSync(file, content.trim() + '\n')
     console.log('created:', template.filename)
   }
 
@@ -53,7 +53,11 @@ import { resolve } from 'path'
 
 function createWindow() {
   let win = new BrowserWindow({
+    // width: 800,
+    // height: 600,
     webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
       preload: resolve('dist/preload.js'),
     },
   })
@@ -82,8 +86,13 @@ app.on('activate', () => {
 declare let message: HTMLDivElement
 
 window.addEventListener('DOMContentLoaded', () => {
-  message.textContent =
-    new Date() + '\\n' + JSON.stringify(process.versions, null, 2)
+  message.textContent = new Date() + '\\n\\n'
+
+  message.textContent +=
+    'versions: ' + JSON.stringify(process.versions, null, 2) + '\\n\\n'
+
+  let filenames = require('fs').readdirSync('.')
+  message.textContent += 'filenames: ' + JSON.stringify(filenames, null, 2)
 })
 `,
   })
