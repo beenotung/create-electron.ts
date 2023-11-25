@@ -15,6 +15,14 @@
     "url": "https://beeno-tung.surge.sh"
   },
   "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/create-electron.ts.git"
+  },
+  "homepage": "https://github.com/beenotung/create-electron.ts#readme",
+  "bugs": {
+    "url": "https://github.com/beenotung/create-electron.ts/issues"
+  },
   "bin": {
     "create-electron.ts": "./cli.js"
   },
