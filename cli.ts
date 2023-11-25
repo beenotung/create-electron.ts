@@ -23,8 +23,6 @@ async function main() {
     console.log('created:', template.filename)
   }
 
-  let title = basename(dest)
-
   setupTemplate({
     filename: 'index.html',
     content: /* html */ `
@@ -33,7 +31,7 @@ async function main() {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${title}</title>
+    <title>${basename(dest)}</title>
     <style>
       #message {
         white-space: pre-wrap;
@@ -110,6 +108,8 @@ window.addEventListener('DOMContentLoaded', () => {
   setupTemplate({
     filename: 'package.json',
     content: {
+      name: basename(dest),
+      version: '0.0.0',
       scripts: {
         'start': 'run-p main tsc:watch',
         'main': 'electron -r ts-node/register main.ts',
