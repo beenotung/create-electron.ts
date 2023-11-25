@@ -1,6 +1,6 @@
 # create-electron.ts
 
-setup electron project template with typescript
+setup electron project template with typescript and node integration.
 
 [![npm Package Version](https://img.shields.io/npm/v/create-electron)](https://www.npmjs.com/package/create-electron)
 
